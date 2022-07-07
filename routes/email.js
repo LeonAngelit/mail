@@ -33,7 +33,6 @@ router.get("/", async (req, res, next) => {
 
 router.post('/',
 validatorHandler(sendMailSchema, 'body'),
-authKey('headers', conf.key),
 jwtAuth('headers'),
 async (req, res, next) => {
   try {
