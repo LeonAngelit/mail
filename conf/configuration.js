@@ -6,6 +6,7 @@ const configuration = {
     mailServer: process.env.MAIL_SERVER,
     key: process.env.API_KEY,
     pkey: process.env.P_KEY,
+    authp: process.env.AUTH_P,
     responseBody: function(name, body){
         name = name.split(' ')[0];
         return `

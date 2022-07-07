@@ -29,7 +29,7 @@ function jwtAuth(property){
       if(err){
         next(boom.unauthorized("Unauthorized"));
       }
-     if(!(decoded.foo == "leonangelit")){
+     if(!(decoded.auth == `${conf.authp}`)){
       next(boom.unauthorized("Unauthorized"));
      }
     });
