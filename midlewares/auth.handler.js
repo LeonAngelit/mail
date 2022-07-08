@@ -23,7 +23,6 @@ function authKey(property, key) {
 function jwtAuth(property){
   return (req, res, next) => {
     const data = req[property].bearer;
-    console.log(data);
 
     jwt.verify(data, conf.pkey, function(err, decoded) {
       if(err){

@@ -12,7 +12,7 @@ class EmailService {
   
         auth: {
           user: `${conf.userMail}`,
-          pass: `${process.env.APP_PASS}`,
+          pass: `${conf.appPass}`,
         },
         tls: {
           rejectUnauthorized: false,

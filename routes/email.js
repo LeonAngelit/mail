@@ -53,6 +53,7 @@ async (req, res, next) => {
     subject: `RE: ${data.subject}`,
     htmlBody: conf.responseBody(data.name, original)
   }, data.mailSender)
+    res.header("Access-Control-Allow-Origin", "*");
     res.json({email, response});
   } catch (error) {
     next(error);
