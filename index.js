@@ -17,9 +17,10 @@ app.use(express.json());
 //Para el ejemplo he dejado la api abierta desde cualquier dirección mediante CORS
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/", (req, res, next) => {
   res.send("API Leon");
 });
+
 
 routerApi(app);
 
